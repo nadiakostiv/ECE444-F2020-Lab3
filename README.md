@@ -7,11 +7,17 @@ https://github.com/miguelgrinberg/flasky
 
 **To build and run the system:**
 
+- Follow the steps outlined in this guide to set up your local docker environment: https://docs.docker.com/get-started/
+- Once you have docker installed, clone this repo
+
 - The Dockerfile is located inside the root directory `ECE444-F2020-Lab3/`
 
 - To build your image, use a command similar to this inside the root directory: `docker build --tag hello:latest .` 
 
 - Then, to run your image as a container: `docker run --publish 5000:5000 --name dockertest hello:latest`
+- you can run `docker image ls` to see a list of docker images you have on your machine
+- `docker ps --all` will show you a list of all the containers and information on their status
+- Navigate to `localhost:5000` to see your app!
 
 ![](images/ece444lab4-1.png)
 ![](images/ece444lab4-2.png)
