@@ -1,21 +1,33 @@
-# ECE444-F2020-Lab3
+# ECE444-F2020-Lab4&5
 
 Nadia Kostiv 
 
 this repo is a clone of
 https://github.com/miguelgrinberg/flasky
 
-**Activity 1:**
-![](images/Activity1.png)
+**To build and run the system:**
 
-**Activity 2:**
-![](images/Activity2-1.png)
-![](images/Activity2-2.png)
-![](images/Activity2-3.png)
-![](images/Activity2-4.png)
+- Follow the steps outlined in this guide to set up your local docker environment: https://docs.docker.com/get-started/
+- Once you have docker installed, clone this repo
 
-**Activity 3:**
+- The Dockerfile is located inside the root directory `ECE444-F2020-Lab3/`
 
-An SQL database is relational- it stores ordered data in tables. Tables have primary keys to uniquely identify each row, and foreign keys, which reference other rows in the database. These links create relationships between database entries.
+- To build your image, use a command similar to this inside the root directory: `docker build --tag hello:latest .` 
 
-A noSQL database is non-relational- it uses collections and documents, rather than records. The data stored is much less structured, and joining differeny entries becomes difficult. Due to the lack of structure, these can sometimes have a performance increase compared to SQL databases.
+- Then, to run your image as a container: `docker run --publish 5000:5000 --name dockertest hello:latest`
+- you can run `docker image ls` to see a list of docker images you have on your machine
+- `docker ps --all` will show you a list of all the containers and information on their status
+- Navigate to `localhost:5000` to see your app!
+
+![](images/ece444lab4-1.png)
+![](images/ece444lab4-2.png)
+![](images/ece444lab4-3.png)
+![](images/ece444lab4-4.png)
+
+**The difference between Docker and a Virtual Machine:**
+
+Docker runs containers, which are run natively on Linux and share the kernel of the host machine with other containers.
+A Vitual Machine runs as an entire guest operating system, using the virtual resources of its host. 
+A container is therefore much more lightweight than a VM, and can be started in just seconds, while a VM can take minutes to spin up.
+A VM provides full OS isolation with guaranteed resources, while Docker just isolate one process from another. 
+
