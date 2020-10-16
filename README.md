@@ -5,6 +5,14 @@ Nadia Kostiv
 this repo is a clone of
 https://github.com/miguelgrinberg/flasky
 
+**To build and run the system:**
+
+- The Dockerfile is located inside the root directory `ECE444-F2020-Lab3/`
+
+- To build your image, use a command similar to this inside the root directory: `docker build --tag hello:latest .` 
+
+- Then, to run your image as a container: `docker run --publish 5000:5000 --name dockertest hello:latest`
+
 ![](images/ece444lab4-1.png)
 ![](images/ece444lab4-2.png)
 ![](images/ece444lab4-3.png)
