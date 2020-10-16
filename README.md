@@ -1,21 +1,19 @@
-# ECE444-F2020-Lab3
+# ECE444-F2020-Lab4&5
 
 Nadia Kostiv 
 
 this repo is a clone of
 https://github.com/miguelgrinberg/flasky
 
-**Activity 1:**
-![](images/Activity1.png)
+![](images/ece444lab4-1.png)
+![](images/ece444lab4-2.png)
+![](images/ece444lab4-3.png)
+![](images/ece444lab4-4.png)
 
-**Activity 2:**
-![](images/Activity2-1.png)
-![](images/Activity2-2.png)
-![](images/Activity2-3.png)
-![](images/Activity2-4.png)
+**The difference between Docker and a Virtual Machine:**
 
-**Activity 3:**
+Docker runs containers, which are run natively on Linux and share the kernel of the host machine with other containers.
+A Vitual Machine runs as an entire guest operating system, using the virtual resources of its host. 
+A container is therefore much more lightweight than a VM, and can be started in just seconds, while a VM can take minutes to spin up.
+A VM provides full OS isolation with guaranteed resources, while Docker just isolate one process from another. 
 
-An SQL database is relational- it stores ordered data in tables. Tables have primary keys to uniquely identify each row, and foreign keys, which reference other rows in the database. These links create relationships between database entries.
-
-A noSQL database is non-relational- it uses collections and documents, rather than records. The data stored is much less structured, and joining differeny entries becomes difficult. Due to the lack of structure, these can sometimes have a performance increase compared to SQL databases.
